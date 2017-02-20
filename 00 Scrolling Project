@@ -1,5 +1,5 @@
-uint8_t x = 31;
-uint8_t y = 4;
+uint8_t x = 30;
+uint8_t y = 1;
 
 void setup() {
   Serial.begin(9600);
@@ -13,5 +13,8 @@ void loop() {
 byte mti(byte x, byte y) {
   if (x % 2) {
     return ((x * 8) + (7 - y));
+  }
+  else{
+    return ((x * 8) + (y));
   }
 }
