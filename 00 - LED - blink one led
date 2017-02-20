@@ -9,6 +9,6 @@ void setup() {
 }
 
 void loop() {
-  leds[30].setRGB(255, 255, 255 );
+  leds[0].setRGB(255, 255, 255 );
   LEDS.show();
 }
