@@ -1,0 +1,17 @@
+uint8_t x = 31;
+uint8_t y = 4;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.println(mti(x, y));
+  while (1);
+}
+
+byte mti(byte x, byte y) {
+  if (x % 2) {
+    return ((x * 8) + (7 - y));
+  }
+}
