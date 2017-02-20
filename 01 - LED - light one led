@@ -1,0 +1,18 @@
+#include "FastLED.h"
+#define NUM_LEDS 144
+#define DATA_PIN 7
+CRGB leds[NUM_LEDS];
+
+void setup() {
+  LEDS.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
+  LEDS.setBrightness(50);
+}
+
+void loop() {
+  leds[0].setRGB(255, 255, 255 );
+  LEDS.show();
+  delay(200);
+  leds[0] = CRGB::Black;
+  LEDS.show();
+  delay(200);
+}
